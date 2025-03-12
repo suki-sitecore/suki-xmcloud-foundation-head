@@ -1,0 +1,26 @@
+.global-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: black;
+  color: white;
+  font-size: 12px;
+  line-height: 1.5;
+  height: 40px;
+
+  p {
+    display: inline-flex;
+    gap: 5px;
+    margin: 0;
+
+    span {
+      display: inline-flex;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

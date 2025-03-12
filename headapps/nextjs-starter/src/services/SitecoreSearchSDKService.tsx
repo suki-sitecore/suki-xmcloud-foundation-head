@@ -1,0 +1,24 @@
+import 'react';
+import { Environment, WidgetsProvider } from '@sitecore-search/react';
+
+export const config = {
+  env: process.env.NEXT_PUBLIC_SEARCH_ENV as Environment,
+  customerKey: process.env.NEXT_PUBLIC_SEARCH_CUSTOMER_KEY,
+  apiKey: process.env.NEXT_PUBLIC_SEARCH_API_KEY,
+  useToken: true,
+};
+
+export const isSearchSDKEnabled = config.env && config.customerKey && config.apiKey ? true : false;
+
+export const SitecoreSearchWidgetsProvider = (props: React.PropsWithChildren): JSX.Element => {
+  console.log('SitecoreSearchWidgetsProvider', props, config);
+  return (
+    <>
+      {isSearchSDKEnabled ? (
+        <WidgetsProvider {...config}>{props.children}</WidgetsProvider>
+      ) : (
+        props.children
+      )}
+    </>
+  );
+};

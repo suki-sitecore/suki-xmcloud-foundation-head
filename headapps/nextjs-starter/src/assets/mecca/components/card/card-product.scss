@@ -1,0 +1,10 @@
+.card-product {
+  @extend .card;
+
+  .card-media {
+    img {
+      aspect-ratio: 0.7526041666666667;
+      object-fit: cover;
+    }
+  }
+}

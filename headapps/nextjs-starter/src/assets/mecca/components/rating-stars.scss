@@ -1,0 +1,15 @@
+.rating-stars {
+  position: relative;
+
+  &-back,
+  &-front {
+    display: inline-flex;
+    gap: 2px;
+  }
+
+  &-front {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

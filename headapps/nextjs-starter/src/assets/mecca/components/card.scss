@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+
+  &-media,
+  &-content {
+    display: flex;
+  }
+
+  &-media {
+    img {
+      display: block;
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+
+    &-top,
+    &-bottom {
+      display: block;
+    }
+
+    &-top {
+      padding: 8px 0 0;
+    }
+
+    &-bottom {
+      padding: 24px 0 24px;
+      margin: auto 0 0 0;
+    }
+  }
+
+  &-title {
+    font-size: 15px;
+    min-height: 38px;
+    margin: 2px 0 0 0;
+
+    &-before {
+      font-size: 13px;
+      font-weight: 600;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &-price {
+    margin: 0;
+    padding: 0;
+  }
+
+  &-rating {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    font-size: 12px;
+  }
+}
+
+@import './card/index';
